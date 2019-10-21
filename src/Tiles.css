@@ -1,0 +1,18 @@
+.tiles {
+  display: grid;
+  grid-template-rows: repeat(3, 50px);
+  grid-template-columns: repeat(3, 50px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.tile {
+  font-weight: bold;
+  padding: 15px;
+  background-color: #ccc;
+}
+
+button.tile {
+  cursor: pointer;
+}
