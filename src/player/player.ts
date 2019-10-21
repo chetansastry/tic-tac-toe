@@ -26,12 +26,12 @@ const minimax = (board: Board, depth = 0, computerPlayer = true): [number, numbe
   const moves = getMoves(board);
   if (computerPlayer) {
     return moves.reduce((currentMax, move) => {
-      const [value, __] = minimax(makeMove(board, move, player), depth + 1, false);
+      const [value] = minimax(makeMove(board, move, player), depth + 1, false);
       return (value > currentMax[0]) ? [value - depth, move] : currentMax;
     }, [-Infinity, NaN]);
   } else {
     return moves.reduce((currentMin, move) => {
-      const [value, __] = minimax(makeMove(board, move, player), depth + 1, true);
+      const [value] = minimax(makeMove(board, move, player), depth + 1, true);
       return (value < currentMin[0]) ? [value + depth, move] : currentMin;
     }, [Infinity, NaN]);
   }

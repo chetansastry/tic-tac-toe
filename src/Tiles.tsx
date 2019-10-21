@@ -31,6 +31,6 @@ interface TilesProps {
 
 export const Tiles: React.FC<TilesProps> = ({ board, onClick }) => (
   <div className="tiles">
-    {board.map((cell, idx) => <Tile cell={cell} position={idx} onClick={onClick}/> )}
+    {board.map((cell, idx) => <Tile cell={cell} key={idx} position={idx} onClick={onClick}/> )}
   </div>
 )
