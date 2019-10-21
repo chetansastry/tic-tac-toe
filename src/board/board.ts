@@ -47,7 +47,7 @@ export const getEmptyBoard = (): Board =>
 // available moves are the offsets that have 0 value
 export const getMoves = (board: Board): number[] => 
   board.reduce(
-    (acc, val, idx) => val === 0 ? [...acc, idx] : acc, 
+    (acc, val, idx) => val === 0 ? [ ...acc, idx ] : acc, 
     [] as number[]);
 
 // make the given move for the given player and return the new board state
